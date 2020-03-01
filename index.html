@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculador Moedas</title>
+</head>
+<body>
+<style>
+    .colorSquare {
+        height: 20px;
+        width: 20px;
+        display: flex;
+    }
+
+    #Thm1Main {
+        background-color: rgba(4, 83, 162, 1);
+    }
+
+    #Thm1Sec {
+        background-color: rgba(248, 143, 28, 1);
+    }
+
+    #Thm2Main {
+        background-color: rgba(166, 68, 151, 1);
+    }
+
+    #Thm2Sec {
+        background-color: rgba(255, 241, 0, 1);
+    }
+
+    #Thm3Main {
+        background-color: rgba(228, 64, 150, 1);
+    }
+
+    #Thm3Sec {
+        background-color: rgba(141, 254, 1, 1);
+    }
+
+    .themesample, #themediv {
+        display: flex;
+    }
+
+    #themediv {
+        padding: 3px;
+        border: 1px solid black;
+        border-radius: 2px;
+        margin-bottom: 10px;
+    }
+
+    .showdiv {
+        display: none;
+    }
+
+    .button.Thm1 {
+        background-color: rgba(4, 83, 162, 1);
+    }
+
+    .button.Thm2 {
+        background-color: rgba(166, 68, 151, 1);
+    }
+
+    .button.Thm3 {
+        background-color: rgba(228, 64, 150, 1);
+    }
+
+    .button {
+        padding: 5px;
+        /*background: darkslategrey;*/
+        color: white;
+        border-radius: 2px;
+        width: 7rem;
+        text-align: initial;
+        height: fit-content;
+    }
+
+    label {
+        margin-bottom: 2px;
+    }
+
+    input, select {
+        width: 100%;
+        border-radius: 2px;
+        padding: 2px;
+        margin-bottom: 5px;
+
+    }
+
+    input.Thm1, select.Thm1 {
+        border: 1px solid rgba(248, 143, 28, 0.8);
+    }
+
+    input.Thm2, select.Thm2 {
+        border: 1px solid rgba(255, 241, 0, 0.8);
+    }
+
+    input.Thm3, select.Thm3 {
+        border: 1px solid rgba(141, 254, 1, 0.8);
+    }
+
+    input.Thm1:focus {
+        border: 1px solid rgba(4, 83, 162, 0.5);
+        background-color: rgba(248, 143, 28, 0.4);
+    }
+
+    input.Thm2:focus {
+        border: 1px solid rgba(166, 68, 151, 0.5);
+        background-color: rgba(255, 241, 0, 0.4);
+    }
+
+    input.Thm3:focus {
+        border: 1px solid rgba(228, 64, 150, 0.5);
+        background-color: rgba(141, 254, 1, 0.4);
+    }
+
+    .card {
+        margin-bottom: 0.75rem !important;
+        padding: 0.3rem !important;
+        border-radius: .25rem;
+        background-color: #ededed;
+        padding: 1rem;
+    }
+
+    @media only screen and (min-width: 1024px), only screen and (max-width: 1023px) and (min-width: 768px), only screen and (max-width: 767px) and (min-width: 640px)
+    body *{
+    font-size:
+
+    16px
+
+    ;
+    }
+
+    body * {
+        box-sizing: border-box;
+        line-height: 1 !important;
+    }
+
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    div {
+        display: block;
+    }
+
+    .ubercard.Thm1 {
+        background-color: rgb(4, 83, 162) !important;
+        margin-top: 10px;
+    }
+
+    .ubercard.Thm2 {
+        background-color: rgb(166, 68, 151) !important;
+        margin-top: 10px;
+    }
+
+    .ubercard.Thm3 {
+        background-color: rgb(228, 64, 150) !important;
+        margin-top: 10px;
+    }
+
+    h2 {
+        color: #9f9f9f;
+    }
+
+    .input-group .input-label {
+        margin-bottom: .5rem;
+    }
+
+    @media only screen and (min-width: 1024px), only screen and (max-width: 1023px) and (min-width: 768px), only screen and (max-width: 767px) and (min-width: 640px) {
+        .font-size-l {
+            font-size: 20px;
+        }
+
+        .input-group > * {
+            width: 100%;
+        }
+
+    }
+
+    @media only screen and (min-width: 1024px), only screen and (max-width: 1023px) and (min-width: 768px), only screen and (max-width: 767px) and (min-width: 640px) {
+        body * {
+            font-size: 16px;
+        }
+    }
+
+    #footer {
+        font-size: small;
+        position: absolute;
+        bottom: 0;
+        color: #7f7f7f;
+    }
+
+</style>
+<script>
+    let currentID = 1;
+</script>
+<form action="#">
+
+    <div id="themediv">
+        <label style="margin-right: 5px">Tema:</label>
+        <div class="themesample">
+            <div class="colorSquare" id="Thm1Main">
+
+            </div>
+            <div class="colorSquare" id="Thm1Sec">
+
+            </div>
+            <input type="radio" onclick="ChangeTheme(this.value, currentID)" id="RB1" name="theme" value="1">
+        </div>
+        <div class="themesample">
+            <div class="colorSquare" id="Thm2Main">
+
+            </div>
+            <div class="colorSquare" id="Thm2Sec">
+
+            </div>
+            <input type="radio" onclick="ChangeTheme(this.value, currentID)" id="RB2" name="theme" value="2">
+        </div>
+
+        <div class="themesample">
+            <div class="colorSquare" id="Thm3Main">
+
+            </div>
+            <div class="colorSquare" id="Thm3Sec">
+
+            </div>
+            <input type="radio" onclick="ChangeTheme(this.value, currentID)" id="RB3" name="theme" value="3">
+        </div>
+    </div>
+    <label style="color: red" for="countMoedas">Número de Moedas:</label>
+    <input type="text" name="Número Moedas" id="countMoedas" class="theme-applied"><br/>
+    <label for="ContainerVol">Volume do Contentor (cm<sup>3</sup>):</label>
+    <input type="text" name="Volume Contentor" id="ContainerVol" onclick="Calc()" onkeypress="Calc()"
+           class="theme-applied"><br/>
+    <label for="Moeda">Moeda:</label>
+    <select name="Moeda" id="Moeda" onchange="Calc()" class="theme-applied">
+        <option value="1">1 Cêntimo</option>
+        <option value="2">2 Cêntimos</option>
+        <option value="5">5 Cêntimos</option>
+        <option value="10">10 Cêntimos</option>
+        <option value="20">20 Cêntimos</option>
+        <option value="50">50 Cêntimos</option>
+        <option value="100">1 Euro</option>
+        <option value="200">2 Euros</option>
+    </select>
+    <br/>
+    <div>Máximo de Moedas no contentor <input disabled id="MoedasPorContentor" class="theme-applied"></input></div>
+    <div>Dinheiro total <input disabled id="TotalMoney" class="theme-applied"></input></div>
+    <div>Peso das Moedas no contentor <input disabled id="PesoMoedasCont" class="theme-applied"></input> <span
+            id="UnPeso"></span></div>
+    <div>Relação Preço/Peso <input disabled id="RatioPriceWeight" class="theme-applied"></input> <span
+            id="RatioPriceWeightUn"></span></div>
+
+
+    <div id="SetH1" onclick="ToggleForm()" class="button theme-applied">Definições <span id="Setbtn">+</span></div>
+    <div id="settings" class="showdiv">
+        <div class="card ubercard theme-applied">
+            <div class="card theme-applied">
+                <h2>Peso</h2>
+                <label for="Pval1">1 Cêntimo</label>
+                <br/><input type="text" id="Pval1" value="2.30" placeholder="Default 2.30"
+                            onclick="CheckVal(this)" class="theme-applied">g<br/>
+                <label for="Pval2">2 Cêntimos</label><br/>
+                <input type="text" name="" id="Pval2" value="3.06" placeholder="Default 3.06" onclick="CheckVal(this)"
+                       class="theme-applied">g<br/>
+                <label for="Pval5">5 Cêntimos</label><br/>
+                <input type="text" name="" id="Pval5" value="3.92" placeholder="Default 3.92" onclick="CheckVal(this)"
+                       class="theme-applied">g<br/>
+                <label for="Pval10">10 Cêntimos</label><br/>
+                <input type="text" id="Pval10" value="4.10" placeholder="Default 4.10" onclick="CheckVal(this)"
+                       class="theme-applied">g<br/>
+                <label for="Pval20">20 Cêntimos</label><br/>
+                <input type="text" name="" id="Pval20" value="5.74" placeholder="Default 5.74" onclick="CheckVal(this)"
+                       class="theme-applied">g<br/>
+                <label for="Pval50">50 Cêntimos</label><br/>
+                <input type="text" name="" id="Pval50" value="7.80" placeholder="Default 7.80" onclick="CheckVal(this)"
+                       class="theme-applied">g<br/>
+                <label for="Pval100">1 Euro</label><br/>
+                <input type="text" id="Pval100" value="7.50" placeholder="Default 7.50" onclick="CheckVal(this)"
+                       class="theme-applied">g<br/>
+                <label for="Pval200">2 Euros</label><br/>
+                <input type="text" name="" id="Pval200" value="8.50" placeholder="Default 8.50"
+                       onclick="CheckVal(this)" class="theme-applied">g
+            </div>
+            <div class="card theme-applied">
+                <h2>Diâmetro</h2>
+                <label for="Pval1">1 Cêntimo</label><br/>
+                <input type="text" id="Dval1" value="16.25" placeholder="Default 16.25" onclick="CheckVal(this)"
+                       class="theme-applied">mm<br/>
+                <label for="Pval2">2 Cêntimos</label><br/>
+                <input type="text" name="" id="Dval2" value="18.75" placeholder="Default 18.75"
+                       onclick="CheckVal(this)" class="theme-applied">mm<br/>
+                <label for="Pval5">5 Cêntimos</label><br/>
+                <input type="text" name="" id="Dval5" value="21.25" placeholder="Default 21.25"
+                       onclick="CheckVal(this)" class="theme-applied">mm<br/>
+                <label for="Pval10">10 Cêntimos</label><br/>
+                <input type="text" id="Dval10" value="19.75" placeholder="Default 19.75"
+                       onclick="CheckVal(this)" class="theme-applied">mm<br/>
+                <label for="Pval20">20 Cêntimos</label><br/>
+                <input type="text" name="" id="Dval20" value="22.25" placeholder="Default 22.25"
+                       onclick="CheckVal(this)" class="theme-applied">mm<br/>
+                <label for="Pval50">50 Cêntimos</label><br/>
+                <input type="text" name="" id="Dval50" value="24.25" placeholder="Default 24.25"
+                       onclick="CheckVal(this)" class="theme-applied">mm<br/>
+                <label for="Pval100">1 Euro</label><br/>
+                <input type="text" id="Dval100" value="23.25" placeholder="Default 23.25"
+                       onclick="CheckVal(this)" class="theme-applied">mm<br/>
+                <label for="Pval200">2 Euros</label><br/>
+                <input type="text" name="" id="Dval200" value="25.75" placeholder="Default 25.75"
+                       onclick="CheckVal(this)" class="theme-applied">mm
+            </div>
+            <div class="card theme-applied">
+                <h2>Espessura</h2>
+                <label for="Pval1">1 Cêntimo</label><br/>
+                <input type="text" id="Eval1" value="1.67" placeholder="Default 1.67" onclick="CheckVal(this)"
+                       class="theme-applied">mm<br/>
+                <label for="Pval2">2 Cêntimos</label><br/>
+                <input type="text" name="" id="Eval2" value="1.67" placeholder="Default 1.67" onclick="CheckVal(this)"
+                       class="theme-applied">mm<br/>
+                <label for="Pval5">5 Cêntimos</label><br/>
+                <input type="text" name="" id="Eval5" value="1.67" placeholder="Default 1.67" onclick="CheckVal(this)"
+                       class="theme-applied">mm<br/>
+                <label for="Pval10">10 Cêntimos</label><br/>
+                <input type="text" id="Eval10" value="1.93" placeholder="Default 1.93" onclick="CheckVal(this)"
+                       class="theme-applied">mm<br/>
+                <label for="Pval20">20 Cêntimos</label><br/>
+                <input type="text" name="" id="Eval20" value="2.14" placeholder="Default 2.14" onclick="CheckVal(this)"
+                       class="theme-applied">mm<br/>
+                <label for="Pval50">50 Cêntimos</label><br/>
+                <input type="text" name="" id="Eval50" value="2.38" placeholder="Default 2.38" onclick="CheckVal(this)"
+                       class="theme-applied">mm<br/>
+                <label for="Pval100">1 Euro</label><br/>
+                <input type="text" id="Eval100" value="2.33" placeholder="Default 2.33" onclick="CheckVal(this)"
+                       class="theme-applied">mm<br/>
+                <label for="Pval200">2 Euros</label><br/>
+                <input type="text" name="" id="Eval200" value="2.20" placeholder="Default 2.20"
+                       onclick="CheckVal(this)" class="theme-applied">mm
+            </div>
+        </div>
+    </div>
+
+</form>
+<div id="footer">
+    ® rt-zen <br>
+    Colors and formulas by <a style="font-size: small; color: #7f7f7f" href="https://www.deviantart.com/">Shanimy</a>
+</div>
+<script>
+
+    //rgb(4,83,162)     AZUL
+    //rgb(248,143,28)   LARANJA
+
+    //rgb(166,68,151)   ROXO
+    //rgb(255,241,0)    AMARELO
+
+    //rgb(228,64,150)   VIOLETA
+    //rgb(141,254,1)    VERDE NEÓN
+    let SetFlag = false;
+
+    function CheckVal(input) {
+        if (isNaN(input.value)) input.value = 0;
+    }
+
+    function Calc() {
+        let opt = document.getElementById("Moeda").value;
+        let VolCont = document.getElementById("ContainerVol").value;
+        let Moeda = {
+            Peso: !isNaN(document.getElementById("Pval" + opt).value) ? document.getElementById("Pval" + opt).value : 0,
+            Diametro: !isNaN(document.getElementById("Dval" + opt).value) ? document.getElementById("Dval" + opt).value : 0,
+            Espessura: !isNaN(document.getElementById("Eval" + opt).value) ? document.getElementById("Eval" + opt).value : 0
+        };
+        let Volume = ((Math.PI * Math.pow(Moeda.Diametro / 2, 2)) * Moeda.Espessura) / 1000;
+        let NumMoedas = parseInt(VolCont / Volume);
+        let PesoMoedas = NumMoedas * Moeda.Peso;
+        let TotalMoney = NumMoedas * opt;
+        document.getElementById("TotalMoney").value = TotalMoney < 100 ? TotalMoney + " cêntimos" : (TotalMoney / 100) + "€";
+        document.getElementById("MoedasPorContentor").value = NumMoedas;
+        if (PesoMoedas < 500) {
+            document.getElementById("PesoMoedasCont").value = PesoMoedas + " g";
+            let ratio = PesoMoedas / opt;
+            document.getElementById("RatioPriceWeight").value = ratio + " g/€";
+        } else if (PesoMoedas >= 500) {
+            let PesoLocal = PesoMoedas / 1000;
+            document.getElementById("PesoMoedasCont").value = Math.round(PesoLocal * 1000) / 1000 + " kg";
+            let ratio = PesoLocal / opt;
+            document.getElementById("RatioPriceWeight").value = Math.round(ratio * 1000) / 1000 + " kg/€";
+        }
+
+    }
+
+    function ChangeTheme(themeID, targetSelector) {
+        let elements = document.getElementsByClassName("theme-applied");
+        Array.prototype.forEach.call(elements, function (el) {
+            el.classList.remove("Thm" + currentID);
+            el.classList.add("Thm" + themeID);
+            document.getElementById("RB" + currentID).checked = false;
+            document.getElementById("RB" + themeID).checked = true;
+            console.log(el.tagName);
+
+        });
+
+        /*
+        el.classList.remove("Thm" + targetSelector);
+            el.classList.add("Thm" + themeID);
+        *  */
+        currentID = themeID;
+        sessionStorage.setItem("theme", themeID);
+    }
+
+    document.getElementById("ContainerVol").addEventListener('keydown', function (event) {
+        const key = event.key; // const {key} = event; ES6+
+        if (key === "Backspace" || key === "Delete") {
+            Calc();
+        }
+    });
+
+    function ToggleForm() {
+        SetFlag = !SetFlag;
+        document.getElementById("settings").classList.toggle("showdiv");
+        document.getElementById("Setbtn").innerText = !SetFlag ? "+" : "-";
+    }
+
+    console.log("loadtheme");
+    let themeID = 2;
+    if (localStorage.hasOwnProperty("theme")) {
+        themeID = localStorage.getItem("theme");
+    }
+    ChangeTheme(themeID, 1);
+    currentID = themeID;
+
+</script>
+</body>
+</html>
