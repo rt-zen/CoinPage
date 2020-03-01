@@ -120,13 +120,10 @@
         padding: 1rem;
     }
 
-    @media only screen and (min-width: 1024px), only screen and (max-width: 1023px) and (min-width: 768px), only screen and (max-width: 767px) and (min-width: 640px)
-    body *{
-    font-size:
-
-    16px
-
-    ;
+    @media only screen and (min-width: 1024px), only screen and (max-width: 1023px) and (min-width: 768px), only screen and (max-width: 767px) and (min-width: 640px) {
+        body * {
+            font-size: 16px;
+        }
     }
 
     body * {
@@ -393,7 +390,6 @@
             el.classList.add("Thm" + themeID);
             document.getElementById("RB" + currentID).checked = false;
             document.getElementById("RB" + themeID).checked = true;
-            console.log(el.tagName);
 
         });
 
@@ -418,8 +414,7 @@
         document.getElementById("Setbtn").innerText = !SetFlag ? "+" : "-";
     }
 
-    console.log("loadtheme");
-    let themeID = 2;
+    let themeID = 1;
     if (localStorage.hasOwnProperty("theme")) {
         themeID = localStorage.getItem("theme");
     }

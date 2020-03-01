@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="728c12f0-acbc-4fff-a39e-5f383834c92e" name="Default Changelist" comment="" />
+    <list default="true" id="728c12f0-acbc-4fff-a39e-5f383834c92e" name="Default Changelist" comment="First commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +37,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="rt-zen" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YAbCbPhhsWIOIkLQz5QgEuyTlO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -45,6 +54,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -81,19 +91,31 @@
       <workItem from="1582484482452" duration="1214000" />
       <workItem from="1582486306442" duration="1577000" />
       <workItem from="1582991105034" duration="12966000" />
-      <workItem from="1583011506928" duration="6698000" />
+      <workItem from="1583011506928" duration="7772000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="731" y="229" key="#Deployment" timestamp="1583025920854">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="229" key="#Deployment/1920.313.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1583025920854" />
     <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583005517811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1582486233590" />
     <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.313.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1583005517811" />
+    <state x="585" y="114" width="1108" height="914" key="CommitChangelistDialog2" timestamp="1583026513193">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="114" width="1108" height="914" key="CommitChangelistDialog2/1920.313.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1583026513193" />
     <state x="588" y="155" key="SettingsEditor" timestamp="1582466847271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
